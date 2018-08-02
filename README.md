@@ -12,7 +12,7 @@
 - `npm install —-save web3@1.0.0-beta.26` 명령어로 web3 를 설치합니다.
 - `src` 폴더에 `web3.js` 파일을 생성 후 다음과 같이 코드를 추가합니다.
 
-```react
+```javascript
 // src/web3.js
 import Web3 from 'web3';
 const web3 = new Web3(window.web3.currentProvider);
@@ -21,7 +21,7 @@ export default web3;
 
 - web3를 설정한 파일을 추가 하기 위해 `src/app.js` 파일을 수정합니다.
 
-```react
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -41,7 +41,7 @@ class App extends Component {
 
 - abi 와 address 를 사용하기 위해 `src` 에 `lottery.js` 파일을 생성해 다음과 같이 코드를 작성합니다.
 
-```react
+```javascript
 // src/lottery.js
 import web3 from './web3';
 
@@ -53,7 +53,7 @@ export default new web3.eth.Contract(abi, address);
 
 - `App.js` 파일에 `lottery.js` 를 추가합니다.
 
-```react
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -64,7 +64,7 @@ import lottery from './lottery';
 
 - `App.js` 파일을 다음과 같이 수정 후 결과를 확인합니다.
 
-```react
+```javascript
 class App extends Component {
   state = {
     manager: ''
@@ -91,7 +91,7 @@ export default App;
 
 - 전체 코드
 
-```react
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
